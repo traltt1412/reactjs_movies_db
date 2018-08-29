@@ -1,0 +1,60 @@
+/* BREAKPOINTS */
+
+$breakpoints: (
+	xs: 640px,
+	small: 768px,
+	medium: 992px,
+	large: 1200px
+);
+
+@mixin screen($breakpoint, $mobileFirst: true) {
+  @if $mobileFirst == true {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+        @content;
+      }
+    }
+    @else {
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    }
+  }
+  @else {
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (max-width: #{map-get($breakpoints, $breakpoint) - 1px}) {
+        @content;
+      }
+    }
+    @else {
+      @media (max-width: #{$breakpoint - 1px}) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin screen-max($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: #{map-get($breakpoints, $breakpoint) - 1px}) {
+      @content;
+    }
+  }
+  @else {
+    @media (max-width: $breakpoint - 1px) {
+      @content;
+    }
+  }
+}
+
+.show-for-small {
+  @include screen(small) {
+    display: none;
+  }
+}
+.hide-for-small {
+  display: none;
+  @include screen(small) {
+    display: inline;
+  }
+}

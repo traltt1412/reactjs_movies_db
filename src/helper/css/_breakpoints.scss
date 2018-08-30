@@ -1,7 +1,6 @@
 /* BREAKPOINTS */
 
 $breakpoints: (
-	xs: 640px,
 	small: 768px,
 	medium: 992px,
 	large: 1200px
@@ -44,17 +43,5 @@ $breakpoints: (
     @media (max-width: $breakpoint - 1px) {
       @content;
     }
-  }
-}
-
-.show-for-small {
-  @include screen(small) {
-    display: none;
-  }
-}
-.hide-for-small {
-  display: none;
-  @include screen(small) {
-    display: inline;
   }
 }

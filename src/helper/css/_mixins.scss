@@ -229,6 +229,14 @@
   }
 }
 
+%clear-appearance {
+	-webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
 %hide-select-arrow {
 	&::-ms-expand {
 		display: none;

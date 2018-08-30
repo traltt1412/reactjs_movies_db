@@ -1,5 +1,7 @@
+@import "../../helper/css/app.scss";
+
 header {
-    background: #081c24;
+    background: $header-bg;
     padding: 10px 15px;
 
     .logo {
@@ -12,7 +14,7 @@ header {
     h1 {
         display: inline-block;
         vertical-align: middle;
-        color: #fff;
+        color: $header-color;
         margin-left: 15px;
     }
 }

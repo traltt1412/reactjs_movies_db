@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import logo from "./../../assets/images/logo.svg"
+import logo from "./../../logo.svg"
 import './header.scss'
 
 export default class Header extends Component {

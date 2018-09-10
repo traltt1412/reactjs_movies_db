@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Header from "./components/Header/Header"
 import SearchMain from "./components/Search/Search"
-import SearchResults from "./components/SearchResults/SearchResults"
+// import SearchResults from "./components/SearchResults/SearchResults"
 class App extends Component {
   constructor (props) {
     super (props)
@@ -13,10 +13,12 @@ class App extends Component {
       <div>
         <Header />
         <SearchMain />
-        <SearchResults />
+        {/* <SearchResults /> */}
       </div>
     );
   }
+
+  
 }
 
 export default App;

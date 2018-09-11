@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Header from "./components/Header/Header"
-import SearchMain from "./components/Search/Search"
+import Search from "./components/Search/Search"
 // import SearchResults from "./components/SearchResults/SearchResults"
 class App extends Component {
   constructor (props) {
@@ -12,7 +12,7 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <SearchMain />
+        <Search />
         {/* <SearchResults /> */}
       </div>
     );

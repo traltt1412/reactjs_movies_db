@@ -33,20 +33,15 @@ export default class Search extends Component {
   }
 
   render() {
-    let results = []
-    if (this.state && this.state.movies) {
-      console.log(this.state.movies)
-      this.state.movies.forEach(e => {
-        let row = <SearchResults key={e.id} data={e} />
-        results.push(row)
-      });
-    }
+    let results = (this.state && this.state.movies) || null
+    results = <SearchResults key='search_results' data={results} />
+
     return (
       <div>
         <form className="container search">
           <input className="js--search" type="text" onChange={this.searchChangeHandler.bind(this)} placeholder="Search for a movie, tv show, person..."></input>
         </form>
-        { results }
+        {results}
       </div>
     )
   }

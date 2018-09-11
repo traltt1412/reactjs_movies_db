@@ -1,0 +1,27 @@
+@import "../../helper/css/app.scss";
+
+.search-results__item {
+  display: block;
+
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+
+  .search-result__feature {
+    width: 25%;
+    float: left;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .search-result__content {
+    width: 75%;
+    float: left;
+    padding-left: 15px;
+  }
+}
